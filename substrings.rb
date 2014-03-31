@@ -6,7 +6,7 @@ def substrings(word_string, dictionary)
     word_array.each do |word|
       count+=1 if (word.include? search_phrase)
     end
-    (count != 0) ? results[search_phrase] = count : nil
+    results[search_phrase] = count if count > 0
     count = 0
   end
   return results
